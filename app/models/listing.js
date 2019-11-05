@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const listingSchema = new mongoose.Schema({
-  event_name: {
+  listing_name: {
     type: String,
     required: true
   },
