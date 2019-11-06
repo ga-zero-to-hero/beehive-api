@@ -9,8 +9,11 @@ const requireToken = passport.authenticate('bearer', { session: false })
 const router = express.Router()
 
 // Index RSVP
+
 router.get('/rsvps', requireToken, (req, res, next) => {
-  Rsvp.find()
+  let search = { owner: req.user.id }
+  Rsvp.find(search)
+    .populate('listing')
     .then(rsvps => {
       return rsvps.map(rsvp => rsvp.toObject())
     })
