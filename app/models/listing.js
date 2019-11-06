@@ -18,11 +18,11 @@ const listingSchema = new mongoose.Schema({
     required: true
   },
   start_time: {
-    type: Date,
+    type: String,
     required: false
   },
   end_time: {
-    type: Date,
+    type: String,
     required: false
   },
   owner: {
