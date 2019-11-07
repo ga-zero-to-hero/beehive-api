@@ -52,6 +52,7 @@ router.post('/listings', requireToken, (req, res, next) => {
 router.patch('/listings/:id', requireToken, removeBlanks, (req, res, next) => {
   delete req.body.listing.owner
   Listing.findById(req.params.id)
+    .populate('listing')
     .then(handle404)
     .then(listing => {
       requireOwnership(req, listing)
@@ -64,6 +65,7 @@ router.patch('/listings/:id', requireToken, removeBlanks, (req, res, next) => {
 // delete a listing
 router.delete('/listings/:id', requireToken, (req, res, next) => {
   Listing.findById(req.params.id)
+    .populate('listing')
     .then(handle404)
     .then(listing => {
       requireOwnership(req, listing)

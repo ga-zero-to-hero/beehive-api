@@ -24,6 +24,7 @@ router.get('/rsvps', requireToken, (req, res, next) => {
 // Show one RSVP
 router.get('/rsvps/:id', requireToken, (req, res, next) => {
   Rsvp.findById(req.params.id)
+    .populate('listing')
     .then(handle404)
     .then(rsvp => res.status(200).json({ rsvp: rsvp.toObject() }))
     .catch(next)
@@ -56,6 +57,7 @@ router.patch('/rsvps/:id', requireToken, removeBlanks, (req, res, next) => {
 // Delete RSVP
 router.delete('/rsvps/:id', requireToken, (req, res, next) => {
   Rsvp.findById(req.params.id)
+    .populate('listing')
     .then(handle404)
     .then(rsvp => {
       requireOwnership(req, rsvp)
