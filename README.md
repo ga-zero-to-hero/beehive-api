@@ -28,7 +28,8 @@ This interactive app allows users to view, create, and RSVP to events (referred 
   - The team was methodical about creating empty files/folder for all aniticipated needs, so that when the team split up to work on feature branches, it was clear to each member what every file/folder's purpose was. This also was a strong way to be sure that all team members had a visual representation of what files had and had not yet been completed.
   - We used pair programming to complete all routes and models. It proved beneficial to employ this strategy, as we completed this process within the first hours of the project, at a time when it was still worthwhile to build familiarity with the project's foundation before working by oneself.
   - Curl script testing was completed, allowing our team to continue on to the front-end.
-  - ![Entity Relationship Diagram](https://i.imgur.com/8kw64Kj.png)
+
+  ![Entity Relationship Diagram](https://i.imgur.com/8kw64Kj.png)
 
 ## Unsolved Problems
 - The process of building the back-end went very smoothly and was finished within the first day of the project.
