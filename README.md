@@ -2,6 +2,10 @@
 
 This interactive app allows users to view, create, and RSVP to events (referred to as 'listings' throughout the code). In addition, the user can view all events to which they've RSVPed, and view, modify or delete events they've created.
 
+*** When demoing the application, please do not use a real email or password when registering ***
+
+ex: email: bee@hive, password: bee
+
 ## Important Links
   - [Deployed front end client](https://ga-zero-to-hero.github.io/beehive-client/)
   - [Front end client repository](https://github.com/ga-zero-to-hero/beehive-client)
